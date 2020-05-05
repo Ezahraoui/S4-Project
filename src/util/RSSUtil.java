@@ -37,7 +37,9 @@ public class RSSUtil {
 				item.setLink(xpath.compile("./link").evaluate(nodeList.item(i),XPathConstants.STRING).toString());
 				item.setPubDate(xpath.compile("./pubDate").evaluate(nodeList.item(i),XPathConstants.STRING).toString());
 				item.setTitle(xpath.compile("./title").evaluate(nodeList.item(i),XPathConstants.STRING).toString());
-				
+				item.setContent(xpath.compile("./content/@url").evaluate(nodeList.item(i),XPathConstants.STRING).toString());
+				item.setEnclosure(xpath.compile("./enclosure/@url").evaluate(nodeList.item(i),XPathConstants.STRING).toString());
+			    item.setURL(xpath.compile("./url").evaluate(nodeList.item(i),XPathConstants.STRING).toString());
 				
 				listeElement.add(item);
 			}

@@ -20,7 +20,7 @@
   <header>
     <nav class="navbar sticky-top d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block regular-nav">
       <div class="first-row">
-        <span class="float-left">Tue, Sep 24, 2019</span>
+        <span class="float-left"><p id="date"></p></span>
         <span class="logo">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
@@ -78,15 +78,22 @@
           <div class="row">
           <c:forEach var="item" items="${items}">
             <article class="col-lg-3 col-md-6 col-sm-12 col-12">
+                 
+              <h3>
+               ${item.title}
+              </h3>
               <div class="wrap">
                 <span class="image-caption">${item.category}</span>
-              </div>    
-              <h3>
-                <a href="${item.link}">${item.title}</a>
-              </h3>
+                <img height="200" width="40" src="${item.enclosure}" alt="img" />
+              </div>
+           <!--    <div class="summary" style="color:red;">
+                <bold>Category</bold> : ${item.category}
+              </div> -->
               <div class="summary">
                 ${item.description}
               </div>
+              
+              <a href="${item.link}">Continue reading...</a>
               <i>${item.pubDate}</i>
             </article>
             <br><br>
@@ -153,6 +160,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script>n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;</script>
 </body>
 
 </html>

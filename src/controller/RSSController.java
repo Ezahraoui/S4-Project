@@ -17,8 +17,12 @@ public class RSSController {
 		public String index(ModelMap mp)
 		{
 			//https://www.lemonde.fr/actualite-medias/article/2019/08/12/les-flux-rss-du-monde-fr_5498778_3236.html
+			//https://www.theguardian.com/world/rss
+			//https://rmcsport.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/
 			//http://feeds.reuters.com/news/artsculture?format=xml
-			String lien="https://rmcsport.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/";
+			//https://www.bfmtv.com/rss/international/
+			//https://www.france24.com/fr/rss
+			String lien="https://www.france24.com/fr/rss";
 			mp.put("items",RSSUtil.elements(lien));
 			
 			return "index";
