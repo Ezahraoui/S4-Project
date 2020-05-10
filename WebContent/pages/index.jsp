@@ -1,8 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${ empty sessionScope.user}">
+		<jsp:forward page="/login.jsp"/>
+</c:if>
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+
+<!-- -------------------------------------------------------------- -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +27,17 @@
 <body>
   <nav id="main-nav">
     <div class="container">
-      <a href="index.html"><img src="resources/img/logo.png" alt="NewsGrid" class="logo"></a>
+      <a href="login.jsp"><img src="resources/img/logo.png" alt="NewsGrid" class="logo"></a>
    
       <ul>
         <li><a class="current" href="rss.html">Home</a></li>
         <li><a href="sports.html">Sports</a></li>
         <li><a href="culture.html">Culture</a></li>
         <li><a href="science.html">Science/Tech</a></li>
-        <li><a href="economy.html">Economy</a></li>
       </ul>
       <br>
         <div>
-        <a href="login.jsp" class="btn btn-secondary">Sign In</a>
-         <a href="register.jsp" class="btn btn-info">Sign Up</a>
+         <a href="Logout" class="btn btn-info">Déconnecter</a>
       </div>
     </div>
   </nav>
@@ -55,7 +61,6 @@
           </article>
           </c:forEach>
         	</div>
-         
     </div>
   </section>
 
@@ -63,30 +68,7 @@
   <footer id="main-footer" class="py-2">
     <div class="container footer-container">
       <div>
-        <img src="resources/img/logo.png" alt="NewsGrid">
-        <p><p>Your trusted source for Fake breaking news analysis, exclusive interviews, headlines, and videos at WTFNews "What the Fake News".</p>
-      </div>
-      <div>
-        <h3>Email Newsletter</h3>
-        <p>If you have any Fake News and want to make our public aware about it then Please send a it to OR Subscribe our NewsFeed page for lastest disclosure of Fake News.</p>
-        <form>
-          <input type="email" placeholder="Enter Email...">
-          <input type="submit" value="Subscribe" class="btn btn-primary">
-        </form>
-      </div>
-      <div>
-        <h3>Site Links</h3>
-        <ul class="list">
-          <li><a href="#">Help & Support</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Join Our Club</h2>
-        <p>Join our Team and stay updated against FakeNews!</p>
-        <a href="#" class="btn btn-secondary">Join Now</a>
+        <img src="resources/img/logo.png" alt="ENEWS">
       </div>
       <div>
         <p>
