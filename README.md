@@ -3,8 +3,8 @@
  
 
 # Sign in / Sign up
-![alt text](WebContent/img/pict1.PNG)
+![alt text](WebContent/resources/img/pict1.PNG)
 
 # Home Page
 
-![alt text](WebContent/img/pict3.PNG)
+![alt text](WebContent/resources/img/pict3.PNG)
