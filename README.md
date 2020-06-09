@@ -3,8 +3,12 @@
  
 
 # Sign in / Sign up
-![alt text](WebContent/resources/img/pic1.PNG)
+![alt text](WebContent/resources/img/pict1.PNG)
 
-# Home Page / Chatbot
-
+# Home Page
 ![alt text](WebContent/resources/img/pict3.PNG)
+
+# 🤖 Chatbot
+
+![alt text](WebContent/resources/img/pict5.PNG)
+![alt text](WebContent/resources/img/pict6.PNG)
