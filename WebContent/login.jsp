@@ -31,8 +31,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Sports</a></li>
         <li><a href="#">Culture</a></li>
-        <li><a href="#">Science/Tech</a></li>
-        <li><a href="#">Economy</a></li>
+        <li><a href="#">Découvertes</a></li>
       </ul>
       <br>
     </div>
@@ -50,7 +49,7 @@
     </div>
   </header>
 	  <div class="container">
-        <form action="Login" method="post" class="text-left form-validate">
+        <form action="connexion.html" method="post" class="text-left form-validate">
 			<div class="form-group">
     				<label for="email">Email</label>
    				  <input id="login-username" type="email" name="email"

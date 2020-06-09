@@ -16,10 +16,11 @@ public class ScienceController {
 		@RequestMapping(method=RequestMethod.GET)
 		public String index(ModelMap mp)
 		{
-			//https://www.lemonde.fr/actualite-medias/article/2019/08/12/les-flux-rss-du-monde-fr_5498778_3236.html
-			//http://feeds.reuters.com/news/artsculture?format=xml
+			
 			String lien="https://www.france24.com/fr/découvertes/rss";
-			mp.put("items",RSSUtil.elements(lien));
+			RSSUtil.elements(lien, 2);
+			
+			mp.put("items",RSSUtil.liste(2));
 			
 			return "science";
 		}

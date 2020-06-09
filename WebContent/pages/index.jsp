@@ -33,11 +33,11 @@
         <li><a class="current" href="rss.html">Home</a></li>
         <li><a href="sports.html">Sports</a></li>
         <li><a href="culture.html">Culture</a></li>
-        <li><a href="science.html">Science/Tech</a></li>
+        <li><a href="science.html">Découvertes</a></li>
       </ul>
       <br>
         <div>
-         <a href="Logout" class="btn btn-info">Déconnecter</a>
+         <a href="logout.html" class="btn btn-info">Déconnecter</a>
       </div>
     </div>
   </nav>
@@ -50,6 +50,16 @@
         <h2>Editor Picks</h2>
        
         <div class="articles-container">
+        <article class="card">
+    	    <iframe
+			    allow="microphone;"
+			    width="350"
+			    height="430"
+			    src="https://console.dialogflow.com/api-client/demo/embedded/9367a2b4-1dde-4c72-a3b4-b3806d1f0cf4">
+			    
+			</iframe>
+			<img src="resources/img/chatbot.jpg">
+		</article>
          <c:forEach var="item" items="${items}">
           <article class="card">
             <img src="${item.enclosure}" alt="">
@@ -60,10 +70,13 @@
             <p>${item.description}</p>
           </article>
           </c:forEach>
+          
         	</div>
     </div>
   </section>
 
+	<script src="https://chatbox.csml.dev/script.min.js?token=umxyhldwudivy5vzubnmphj8ypfylnvv" id="clevy-chatbox" async></script>
+	
   <!-- Footer -->
   <footer id="main-footer" class="py-2">
     <div class="container footer-container">

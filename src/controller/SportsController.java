@@ -17,11 +17,13 @@ public class SportsController {
 		@RequestMapping(method=RequestMethod.GET)
 		public String index(ModelMap mp)
 		{
-			//https://www.lemonde.fr/actualite-medias/article/2019/08/12/les-flux-rss-du-monde-fr_5498778_3236.html
-			//http://feeds.reuters.com/news/artsculture?format=xml
-			String lien="https://www.france24.com/fr/sports/rss";
-			mp.put("items",RSSUtil.elements(lien));
 			
+			String lien="https://www.france24.com/fr/sports/rss";
+			RSSUtil.elements(lien, 1);
+			
+			mp.put("items",RSSUtil.liste(1));
+			
+					
 			return "sports";
 		}
 	

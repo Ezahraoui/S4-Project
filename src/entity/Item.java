@@ -10,6 +10,7 @@ public class Item {
 	private String category;
 	private String pubDate;
 	private String enclosure;
+	private int type;
 	
 	/********************** constructeur par defaut***********************/
 	
@@ -19,16 +20,10 @@ public class Item {
 
 	/********************** constructeur generique***********************/
 	
-	public Item(String title, String description, String link, String guid, String category, String pubDate) {
-		super();
-		this.title = title;
-		this.description = description;
-		this.link = link;
-		this.guid = guid;
-		this.category = category;
-		this.pubDate = pubDate;
-	}
-	public Item(String title, String description, String link, String guid, String category, String pubDate, String enclosure) {
+	
+
+	public Item(String title, String description, String link, String guid, String category, String pubDate,
+			String enclosure, int type) {
 		super();
 		this.title = title;
 		this.description = description;
@@ -37,6 +32,18 @@ public class Item {
 		this.category = category;
 		this.pubDate = pubDate;
 		this.enclosure = enclosure;
+		this.type = type;
+	}
+
+	public Item(String title, String description, String link, String guid, String category, String pubDate, int type) {
+		super();
+		this.title = title;
+		this.description = description;
+		this.link = link;
+		this.guid = guid;
+		this.category = category;
+		this.pubDate = pubDate;
+		this.type = type;
 	}
 
 	/********************** ACCESSEUR ET MUTATEUR ***********************/
@@ -95,6 +102,14 @@ public class Item {
 
 	public void setEnclosure(String enclosure) {
 		this.enclosure = enclosure;
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
 	}
 	
 	

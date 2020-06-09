@@ -51,7 +51,7 @@
     </div>
   </header>
 	  <div class="container">
-        <form action="Register" method="post" class="text-left form-validate">
+        <form action="register.html" method="post" class="text-left form-validate">
             <div class="form-group">
                 <label for="lastname">Last name</label>
                  <input id="lastname" type="text" name="nom"
