@@ -12,3 +12,4 @@
 
 ![alt text](WebContent/resources/img/pict5.PNG)
 ![alt text](WebContent/resources/img/pict6.PNG)
+![alt text](WebContent/resources/img/pict8.PNG)
